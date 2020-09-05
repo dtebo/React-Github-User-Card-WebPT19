@@ -27,9 +27,18 @@ class GithubUser extends Component{
     }
 
     render(){
+        const { userinfo } = this.state;
+
         return(
             <div className='user-info-container'>
-                <h1>User Info Here...</h1>
+                {userinfo ? (
+                    <>
+                        <p>{userinfo.login}</p>
+                        <p>{userinfo.location}</p>
+                    </>
+                ) : (
+                    <h2>No user info found!</h2>
+                )}
             </div>
         );
     }
