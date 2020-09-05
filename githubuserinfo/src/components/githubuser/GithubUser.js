@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import FollowerList from '../followers/FollowerList';
+
 class GithubUser extends Component{
     state = {
         userinfo: {}
@@ -35,6 +37,7 @@ class GithubUser extends Component{
                     <>
                         <p>{userinfo.login}</p>
                         <p>{userinfo.location}</p>
+                        <FollowerList url={userinfo.followers_url} />
                     </>
                 ) : (
                     <h2>No user info found!</h2>
