@@ -5,7 +5,7 @@ import FollowerList from '../followers/FollowerList';
 
 class GithubUser extends Component{
     state = {
-        userinfo: {}
+        userinfo: null
     };
 
     componentDidMount(){
