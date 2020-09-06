@@ -25,7 +25,7 @@ class FollowerList extends Component{
         axios.get(url)
             .then(resp => {
                 this.setState({
-                    followers: resp
+                    followers: resp.data
                 });
             })
             .catch(err => {
@@ -35,11 +35,11 @@ class FollowerList extends Component{
 
     render(){
         return(
-            <>
+            <div className='follower-list'>
                 {this.state.followers && this.state.followers.map(follower => {
                     return <Follower follower={follower} />
                 })}
-            </>
+            </div>
         );
     }
 };

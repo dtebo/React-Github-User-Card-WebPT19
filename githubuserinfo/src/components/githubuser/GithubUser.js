@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import * as MUI from '../../materialui/index';
+
 import FollowerList from '../followers/FollowerList';
+
+import './githubuser.css';
 
 class GithubUser extends Component{
     state = {
@@ -35,8 +39,12 @@ class GithubUser extends Component{
             <div className='user-info-container'>
                 {userinfo ? (
                     <>
-                        <p>{userinfo.login}</p>
-                        <p>{userinfo.location}</p>
+                        <MUI.Card
+                            className='user-card'
+                        >
+                            <p>{userinfo.login}</p>
+                            <p>{userinfo.location}</p>
+                        </MUI.Card>
                         <FollowerList url={userinfo.followers_url} />
                     </>
                 ) : (
