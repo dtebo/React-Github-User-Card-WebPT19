@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import Follower from './Follower';
 
+import './followers.css';
+
 class FollowerList extends Component{
     constructor(props){
         super(props);
