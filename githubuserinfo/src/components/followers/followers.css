@@ -1,0 +1,12 @@
+.follower-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 900px;
+    max-height: 500px;
+}
+
+.follower{
+    margin: 20px;
+}

@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo{
+    padding: 10px;
+}
+
+.header nav a{
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: rgb(200,0,200);
+}
+
+.header nav a:hover{
+    background-color: rgb(10, 178, 255);
+    color: rgb(255, 255, 255);
+}
