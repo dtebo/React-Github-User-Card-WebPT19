@@ -1,7 +1,15 @@
 import {
-    Card
+    Card,
+    CardHeader,
+    CardContent,
+    Avatar,
+    Typography
 } from '@material-ui/core';
 
 export{
-    Card
+    Card,
+    CardHeader,
+    CardContent,
+    Avatar,
+    Typography
 };

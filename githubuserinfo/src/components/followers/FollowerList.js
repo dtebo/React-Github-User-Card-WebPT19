@@ -39,7 +39,10 @@ class FollowerList extends Component{
         return(
             <div className='follower-list'>
                 {this.state.followers && this.state.followers.map(follower => {
-                    return <Follower follower={follower} />
+                    return <Follower 
+                                key={follower.id}
+                                follower={follower}
+                            />
                 })}
             </div>
         );

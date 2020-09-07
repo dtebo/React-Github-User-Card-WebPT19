@@ -42,8 +42,41 @@ class GithubUser extends Component{
                         <MUI.Card
                             className='user-card'
                         >
-                            <p>{userinfo.login}</p>
-                            <p>{userinfo.location}</p>
+                            <MUI.CardHeader
+                                avatar={
+                                    <MUI.Avatar
+                                        aria-label="user"
+                                        className='avatar'
+                                    >
+                                        DT
+                                    </MUI.Avatar>
+                                }
+                                title={
+                                    <>
+                                        <MUI.Typography
+                                            variant='h4'
+                                            component='h4'
+                                        >
+                                            {userinfo.login}
+                                        </MUI.Typography>
+                                        <MUI.Typography
+                                            variant='h5'
+                                            component='h5'
+                                        >
+                                            {userinfo.location}
+                                        </MUI.Typography>
+                                        <MUI.Typography
+                                            variant='pre'
+                                            component='pre'
+                                        >
+                                            <p className='bio-text'>{userinfo.bio}</p>
+                                        </MUI.Typography>
+                                    </>
+                                }
+                            />
+                            <MUI.CardContent>
+                               
+                            </MUI.CardContent>
                         </MUI.Card>
                         <FollowerList url={userinfo.followers_url} />
                     </>
