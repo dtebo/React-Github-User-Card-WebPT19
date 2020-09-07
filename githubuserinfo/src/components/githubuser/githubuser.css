@@ -2,3 +2,16 @@
     margin: 10px auto;
     width: 80%;
 }
+
+.bio-text{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.bio-text:before, .bio-text:after{
+    content: '"';
+}
+
+.card-content{
+    text-align: left;
+}

@@ -66,19 +66,20 @@ class GithubUser extends Component{
                                             {userinfo.location}
                                         </MUI.Typography>
                                         <MUI.Typography
-                                            variant='pre'
-                                            component='pre'
+                                            variant='body1'
+                                            component='body1'
+                                            className='bio-text'
                                         >
-                                            <p className='bio-text'>{userinfo.bio}</p>
+                                            {userinfo.bio}
                                         </MUI.Typography>
                                     </>
                                 }
                             />
-                            <MUI.CardContent>
-                               
+                            <MUI.CardContent className='card-content'>
+                                <h2>Followers</h2>
+                                <FollowerList url={userinfo.followers_url} />
                             </MUI.CardContent>
                         </MUI.Card>
-                        <FollowerList url={userinfo.followers_url} />
                     </>
                 ) : (
                     <h2>No user info found!</h2>
